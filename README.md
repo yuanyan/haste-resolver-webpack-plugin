@@ -1,2 +1,14 @@
 # haste-resolver-webpack-plugin
-Haste Resolver Webpack Plugin
+> Haste resolver plugin for webpack
+
+```
+var HasteResolverPlugin = require('haste-resolver-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    new HasteResolverPlugin({
+      platform: 'web'
+    }),
+  ]
+};
+```
