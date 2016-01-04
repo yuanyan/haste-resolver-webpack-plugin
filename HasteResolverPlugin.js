@@ -17,7 +17,7 @@ function HasteResolverPlugin(options) {
   var preferNativePlatform = options.preferNativePlatform;
 
   this.resolver = new Resolver({
-    roots: projectRoots,
+    roots: roots,
     blacklistRE: blacklistRE,
     platform: options.platform,
     providesModuleNodeModules: options.nodeModules,
