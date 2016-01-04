@@ -7,8 +7,17 @@ var HasteResolverPlugin = require('haste-resolver-webpack-plugin');
 module.exports = {
   plugins: [
     new HasteResolverPlugin({
-      platform: 'web'
+      platform: 'web',
+      nodeModules: 'react-web'
     }),
   ]
 };
 ```
+
+
+## Options
+* roots *Array*. Default is `[process.cwd()]`
+* platform *String* - web/ios/android. Default is `web`
+* blacklist *Array*. Directory or file to ignore.
+* nodeModules *Array*. Node modules should crawl.
+* preferNativePlatform *Boolean*. Default is `true`

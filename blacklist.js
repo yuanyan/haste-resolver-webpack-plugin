@@ -1,4 +1,5 @@
 /**
+ * Copyright (c) 2015-present, Yuanyan Cao. All rights reserved.
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -13,14 +14,7 @@ var path = require('path');
 // Don't forget to everything listed here to `testConfig.json`
 // modulePathIgnorePatterns.
 var sharedBlacklist = [
-  'website',
-  'node_modules/react-tools/src/React.js',
-  'node_modules/react-tools/src/renderers/shared/event/EventPropagators.js',
-  'node_modules/react-tools/src/renderers/shared/event/eventPlugins/ResponderEventPlugin.js',
-  'node_modules/react-tools/src/renderers/shared/event/eventPlugins/ResponderSyntheticEvent.js',
-  'node_modules/react-tools/src/renderers/shared/event/eventPlugins/ResponderTouchHistoryStore.js',
-  'node_modules/react-tools/src/renderers/shared/reconciler/ReactInstanceHandles.js',
-  'node_modules/react-tools/src/shared/vendor/core/ExecutionEnvironment.js',
+
 ];
 
 var platformBlacklists = {
