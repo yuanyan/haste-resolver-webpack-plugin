@@ -14,12 +14,14 @@ function HasteResolverPlugin(options) {
   var roots = options.roots || [process.cwd()];
   var blacklistRE = blacklist(options.platform || 'web', options.blacklist);
 
+  var preferNativePlatform = options.preferNativePlatform;
+
   this.resolver = new Resolver({
     roots: projectRoots,
     blacklistRE: blacklistRE,
     platform: options.platform,
     providesModuleNodeModules: options.nodeModules,
-    preferNativePlatform: options.preferNativePlatform
+    preferNativePlatform: (typeof preferNativePlatform !== 'undefined')? preferNativePlatform: true;
   });
 }
 
