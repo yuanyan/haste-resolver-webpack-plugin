@@ -1,4 +1,4 @@
-# haste-resolver-webpack-plugin
+# haste-resolver-webpack-plugin [![npm version](https://badge.fury.io/js/haste-resolver-webpack-plugin.svg)](http://badge.fury.io/js/haste-resolver-webpack-plugin)
 > Haste resolver plugin for webpack
 
 ```
@@ -13,7 +13,6 @@ module.exports = {
   ]
 };
 ```
-
 
 ## Options
 * roots *Array*. Default is `[process.cwd()]`

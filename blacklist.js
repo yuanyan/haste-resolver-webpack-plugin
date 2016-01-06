@@ -13,31 +13,30 @@ var path = require('path');
 
 // Don't forget to everything listed here to `testConfig.json`
 // modulePathIgnorePatterns.
-var sharedBlacklist = [
-
-];
+var sharedBlacklist = [];
 
 var platformBlacklists = {
   web: [
     '.ios.js',
     '.android.js',
-    '.weex.js',
+    '.native.js',
+  ],
+  win: [
+    '.web.js',
+    '.ios.js',
+    '.android.js',
+    '.native.js',
   ],
   ios: [
     '.web.js',
     '.android.js',
-    '.weex.js',
+    '.win.js',
   ],
   android: [
     '.web.js',
     '.ios.js',
-    '.weex.js',
+    '.win.js',
   ],
-  weex: [
-    '.web.js',
-    '.ios.js',
-    '.android.js',
-  ]
 };
 
 function escapeRegExp(str) {

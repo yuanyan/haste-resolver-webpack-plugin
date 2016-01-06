@@ -21,7 +21,7 @@ function HasteResolverPlugin(options) {
     blacklistRE: blacklistRE,
     platform: options.platform,
     providesModuleNodeModules: options.nodeModules,
-    preferNativePlatform: (typeof preferNativePlatform !== 'undefined')? preferNativePlatform: true;
+    preferNativePlatform: (typeof preferNativePlatform !== 'undefined')? preferNativePlatform: true,
   });
 }
 

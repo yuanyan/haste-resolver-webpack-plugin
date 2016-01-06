@@ -1,11 +1,11 @@
 {
   "name": "haste-resolver-webpack-plugin",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Haste resolver plugin for webpack",
   "main": "HasteResolverPlugin.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:yuanyan/haste-resolver-webpack-plugin.git"
   },
   "keywords": [
     "react-web",
@@ -14,6 +14,6 @@
     "webpack-plugin"
   ],
   "dependencies": {
-    "haste-resolver": "0.1.1"
+    "haste-resolver": "0.1.2"
   }
 }
