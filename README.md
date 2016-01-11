@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new HasteResolverPlugin({
       platform: 'web',
-      nodeModules: 'react-web'
+      nodeModules: ['react-web', 'react-button', 'react-native-button']
     }),
   ]
 };
