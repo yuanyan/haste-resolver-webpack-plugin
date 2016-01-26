@@ -20,23 +20,34 @@ var platformBlacklists = {
     '.ios.js',
     '.android.js',
     '.native.js',
+    '.weex.js',
   ],
   win: [
     '.web.js',
     '.ios.js',
     '.android.js',
     '.native.js',
+    '.weex.js',
   ],
   ios: [
     '.web.js',
     '.android.js',
     '.win.js',
+    '.weex.js',
   ],
   android: [
     '.web.js',
     '.ios.js',
     '.win.js',
+    '.weex.js',
   ],
+  weex: [
+    '.native.js',
+    '.web.js',
+    '.ios.js',
+    '.android.js',
+    '.win.js',
+  ]
 };
 
 function escapeRegExp(str) {
