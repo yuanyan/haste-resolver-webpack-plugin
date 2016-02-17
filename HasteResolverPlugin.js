@@ -16,32 +16,38 @@ function HasteResolverPlugin(options) {
 
   var preferNativePlatform = options.preferNativePlatform;
 
-  this.resolver = new Resolver({
+  var resolver = new Resolver({
     roots: roots,
     blacklistRE: blacklistRE,
     platform: options.platform,
     providesModuleNodeModules: options.nodeModules,
     preferNativePlatform: (typeof preferNativePlatform !== 'undefined')? preferNativePlatform: true,
   });
+
+  this.getHasteMap = resolver.getHasteMap();
+  this.platform = options.platform,
 }
 
 module.exports = HasteResolverPlugin;
 
 HasteResolverPlugin.prototype.apply = function(compiler) {
-  var resolver = this.resolver;
+  var getHasteMap = this.getHasteMap;
+  var platform = this.platform;
 
   compiler.resolvers.normal.plugin("module", function(request, callback) {
 
-    resolver.getHasteMap(function(hasteMap){
-      if (hasteMap[request.request]) {
+    getHasteMap.then(function(hasteMap){
+      var mod = hasteMap.getModule(request.request, platform);
+      if (mod) {
         this.doResolve("file", {
-          request: hasteMap[request.request].path,
+          request: mod.path,
           query: request.query,
           directory: request.directory
         }, callback);
       } else {
         callback();
       }
+      // TODO: require('./foo') when exist foo.web.js、foo.ios.js
     }.bind(this))
 
   })
