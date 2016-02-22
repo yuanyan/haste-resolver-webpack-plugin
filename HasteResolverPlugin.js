@@ -25,7 +25,7 @@ function HasteResolverPlugin(options) {
   });
 
   this.getHasteMap = resolver.getHasteMap();
-  this.platform = options.platform,
+  this.platform = options.platform;
 }
 
 module.exports = HasteResolverPlugin;
